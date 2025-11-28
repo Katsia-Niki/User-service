@@ -1,0 +1,22 @@
+2025-11-22 10:23:40 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-22 10:23:40 [main] [logStatement] [130] DEBUG org.hibernate.SQL - /* insert for by.nikiforova.crud.entity.User */insert into users (age,created_at,email,name) values (?,?,?,?)
+2025-11-22 10:23:40 [main] [getGeneratedValues] [103] DEBUG org.hibernate.id.IdentifierGeneratorHelper - Extracted generated values for entity [by.nikiforova.crud.entity.User]: [1]
+2025-11-22 10:23:40 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-22 10:23:40 [main] [logFlushResults] [104] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2025-11-22 10:23:40 [main] [logFlushResults] [111] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2025-11-22 10:23:40 [main] [logEntities] [102] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+2025-11-22 10:23:40 [main] [logEntities] [113] DEBUG org.hibernate.internal.util.EntityPrinter - by.nikiforova.crud.entity.User{createdAt=2025-11-22T10:23:40.598773, name=Kate, id=1, age=15, email=kate_mail@ru.by}
+2025-11-22 10:23:40 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	31800 ns acquiring 1 JDBC connections
+	20200 ns releasing 1 JDBC connections
+	316900 ns preparing 1 JDBC statements
+	3237300 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	7503900 ns executing 1 flushes (flushing a total of 1 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-22 10:23:40 [main] [save] [28] DEBUG by.nikiforova.crud.dao.UserDaoImpl - Transaction on saving user with id = Person{id=1, name='Kate', email='kate_mail@ru.by', age=15, createdAt=2025-11-22T10:23:40.598773} successfully completed.

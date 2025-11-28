@@ -1,0 +1,4 @@
+2025-11-26 17:35:24 [main] [getAllUsers] [61] INFO  by.nikiforova.crud.service.UserServiceImpl - All users found
+2025-11-26 17:35:24 [main] [logProvider] [162] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2025-11-26 17:35:24 [main] [updateUser] [83] INFO  by.nikiforova.crud.service.UserServiceImpl - Updated Name was updated
+2025-11-26 17:35:24 [main] [createUser] [26] INFO  by.nikiforova.crud.service.UserServiceImpl - User Kate created

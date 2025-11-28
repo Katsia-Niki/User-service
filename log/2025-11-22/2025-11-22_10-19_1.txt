@@ -1,0 +1,1 @@
+2025-11-22 10:19:06 [Hibernate Connection Pool Validation Thread] [validate] [50] DEBUG org.hibernate.orm.connections.pooling - Connection pool now considered primed; min-size will be maintained

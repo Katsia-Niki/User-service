@@ -1,0 +1,679 @@
+2025-11-28 22:31:47 [main] [addIntegrator] [49] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.boot.beanvalidation.BeanValidationIntegrator]
+2025-11-28 22:31:47 [main] [addIntegrator] [49] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator]
+2025-11-28 22:31:48 [main] [logVersion] [45] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2025-11-28 22:31:48 [main] [<clinit>] [163] DEBUG org.hibernate.cfg.Environment - HHH000206: 'hibernate.properties' not found
+2025-11-28 22:31:48 [main] [unmarshal] [113] DEBUG hibernate.boot.cfgxml.internal.JaxbCfgProcessor - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+2025-11-28 22:31:48 [main] [addIntegrator] [49] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.boot.beanvalidation.BeanValidationIntegrator]
+2025-11-28 22:31:48 [main] [addIntegrator] [49] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator]
+2025-11-28 22:31:48 [main] [initiateService] [47] DEBUG org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-28 22:31:48 [main] [configure] [85] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-11-28 22:31:48 [main] [debugf] [383] DEBUG org.hibernate.orm.connections.pooling - Initializing Connection pool with 1 Connections
+2025-11-28 22:31:48 [main] [logDatabaseAndDriver] [437] DEBUG org.hibernate.orm.jdbc - HHH100017: Database:
+	name: PostgreSQL
+	version: 17.5
+	major: 17
+	minor: 5
+2025-11-28 22:31:48 [main] [logDatabaseAndDriver] [443] DEBUG org.hibernate.orm.jdbc - HHH100018: Driver:
+	name: PostgreSQL JDBC Driver
+	version: 42.7.8
+	major: 42
+	minor: 7
+	JDBC version: 4.2
+2025-11-28 22:31:48 [main] [constructDialect] [152] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-28 22:31:48 [main] [logSelectedDialect] [93] DEBUG org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: 17.5
+2025-11-28 22:31:49 [main] [getSupportedContextualLobTypes] [59] DEBUG org.hibernate.orm.jdbc.lob - HHH10010004: Disabling contextual LOB creation as Dialect reported it is not supported
+2025-11-28 22:31:49 [main] [logJdbcFetchSize] [389] DEBUG org.hibernate.orm.jdbc - HHH100122: Using default JDBC fetch size: 0
+2025-11-28 22:31:49 [main] [logConnectionInfo] [184] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/crud_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.5
+	Default catalog/schema: crud_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 5
+2025-11-28 22:31:49 [main] [<init>] [249] DEBUG org.hibernate.internal.SessionFactoryImpl - HHH000030: Instantiating factory [beb4562d-d58b-4ab8-a6ca-98d74ffe7b90] with settings: {hibernate.format_sql=false, dialect=org.hibernate.dialect.PostgreSQLDialect, java.specification.version=17, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1251, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, java.class.path=C:\Users\Lenovo\.m2\repository\org\junit\platform\junit-platform-launcher\6.0.1\junit-platform-launcher-6.0.1.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2025.1.4.1\lib\idea_rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2025.1.4.1\plugins\junit\lib\junit5-rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2025.1.4.1\plugins\junit\lib\junit-rt.jar;D:\Programming\Workspace\Java_myself\homework2\target\test-classes;D:\Programming\Workspace\Java_myself\homework2\target\classes;C:\Users\Lenovo\.m2\repository\org\postgresql\postgresql\42.7.8\postgresql-42.7.8.jar;C:\Users\Lenovo\.m2\repository\org\checkerframework\checker-qual\3.49.5\checker-qual-3.49.5.jar;C:\Users\Lenovo\.m2\repository\org\hibernate\validator\hibernate-validator\9.0.1.Final\hibernate-validator-9.0.1.Final.jar;C:\Users\Lenovo\.m2\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;C:\Users\Lenovo\.m2\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;C:\Users\Lenovo\.m2\repository\jakarta\validation\jakarta.validation-api\3.1.1\jakarta.validation-api-3.1.1.jar;C:\Users\Lenovo\.m2\repository\org\glassfish\expressly\expressly\6.0.0\expressly-6.0.0.jar;C:\Users\Lenovo\.m2\repository\jakarta\el\jakarta.el-api\6.0.1\jakarta.el-api-6.0.1.jar;C:\Users\Lenovo\.m2\repository\org\hibernate\orm\hibernate-core\7.1.8.Final\hibernate-core-7.1.8.Final.jar;C:\Users\Lenovo\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.2.0\jakarta.persistence-api-3.2.0.jar;C:\Users\Lenovo\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\Lenovo\.m2\repository\org\hibernate\models\hibernate-models\1.0.1\hibernate-models-1.0.1.jar;C:\Users\Lenovo\.m2\repository\net\bytebuddy\byte-buddy\1.17.6\byte-buddy-1.17.6.jar;C:\Users\Lenovo\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\Lenovo\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\Lenovo\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\Lenovo\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\Lenovo\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\Lenovo\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\Lenovo\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\Lenovo\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\Lenovo\.m2\repository\org\antlr\antlr4-runtime\4.13.2\antlr4-runtime-4.13.2.jar;C:\Users\Lenovo\.m2\repository\org\apache\logging\log4j\log4j-api\2.25.2\log4j-api-2.25.2.jar;C:\Users\Lenovo\.m2\repository\org\apache\logging\log4j\log4j-core\2.25.2\log4j-core-2.25.2.jar;C:\Users\Lenovo\.m2\repository\org\jetbrains\annotations\26.0.2\annotations-26.0.2.jar;C:\Users\Lenovo\.m2\repository\org\junit\jupiter\junit-jupiter-api\6.0.1\junit-jupiter-api-6.0.1.jar;C:\Users\Lenovo\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Lenovo\.m2\repository\org\junit\platform\junit-platform-commons\6.0.1\junit-platform-commons-6.0.1.jar;C:\Users\Lenovo\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Lenovo\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\Lenovo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\6.0.1\junit-jupiter-engine-6.0.1.jar;C:\Users\Lenovo\.m2\repository\org\junit\platform\junit-platform-engine\6.0.1\junit-platform-engine-6.0.1.jar;C:\Users\Lenovo\.m2\repository\org\mockito\mockito-core\5.20.0\mockito-core-5.20.0.jar;C:\Users\Lenovo\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.7\byte-buddy-agent-1.17.7.jar;C:\Users\Lenovo\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Lenovo\.m2\repository\org\mockito\mockito-junit-jupiter\5.20.0\mockito-junit-jupiter-5.20.0.jar;C:\Users\Lenovo\.m2\repository\org\testcontainers\testcontainers\2.0.2\testcontainers-2.0.2.jar;C:\Users\Lenovo\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-compress\1.28.0\commons-compress-1.28.0.jar;C:\Users\Lenovo\.m2\repository\commons-codec\commons-codec\1.19.0\commons-codec-1.19.0.jar;C:\Users\Lenovo\.m2\repository\commons-io\commons-io\2.20.0\commons-io-2.20.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-lang3\3.18.0\commons-lang3-3.18.0.jar;C:\Users\Lenovo\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java-api\3.7.0\docker-java-api-3.7.0.jar;C:\Users\Lenovo\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.20\jackson-annotations-2.20.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.7.0\docker-java-transport-zerodep-3.7.0.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java-transport\3.7.0\docker-java-transport-3.7.0.jar;C:\Users\Lenovo\.m2\repository\net\java\dev\jna\jna\5.18.1\jna-5.18.1.jar;C:\Users\Lenovo\.m2\repository\org\testcontainers\junit-jupiter\1.21.3\junit-jupiter-1.21.3.jar;C:\Users\Lenovo\.m2\repository\org\testcontainers\postgresql\1.21.3\postgresql-1.21.3.jar;C:\Users\Lenovo\.m2\repository\org\testcontainers\jdbc\1.21.3\jdbc-1.21.3.jar;C:\Users\Lenovo\.m2\repository\org\testcontainers\database-commons\1.21.3\database-commons-1.21.3.jar, kotlinx.coroutines.debug.enable.mutable.state.flows.stack.trace=true, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, idea.test.cyclic.buffer.size=1048576, user.variant=, java.vendor.url=https://java.oracle.com/, user.timezone=Europe/Minsk, java.vm.specification.version=17, os.name=Windows 10, hibernate.jdbc.batch_versioned_data=false, javax.persistence.validation.mode=AUTO, sun.java.launcher=SUN_STANDARD, user.country=RU, sun.boot.library.path=C:\Program Files\Java\jdk-17.0.2\bin, sun.java.command=com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit5 by.nikiforova.crud.dao.UserDaoImplTest, hibernate.use_sql_comments=true, jdk.debug=release, sun.cpu.endian=little, user.home=C:\Users\Lenovo, user.language=ru, java.specification.vendor=Oracle Corporation, java.version.date=2022-01-18, java.home=C:\Program Files\Java\jdk-17.0.2, hibernate.validator.apply_to_ddl=false, file.separator=\, java.vm.compressedOopsMode=Zero based, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, intellij.debug.agent=true, hibernate.validator.autoregister_listeners=false, hibernate.hbm2ddl.auto=create-drop, user.script=, connection.password=password, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=17.0.2+8-LTS-86, user.name=Lenovo, hibernate.cache.use_query_cache=false, path.separator=;, kotlinx.coroutines.debug.enable.creation.stack.trace=false, hibernate.connection.username=****, os.version=10.0, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.javax.persistence.validation.mode=AUTO, hibernate.connection.url=jdbc:postgresql://localhost:5432/crud_db, connection.pool_size=5, file.encoding=UTF-8, format_sql=false, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.show_sql=true, hibernate.current_session_context_class=thread, hibernate.connection.driver_class=org.postgresql.Driver, java.vendor.url.bug=https://bugreport.java.com/bugreport/, java.io.tmpdir=C:\Users\Lenovo\AppData\Local\Temp\, java.version=17.0.2, jboss.modules.system.pkgs=com.intellij.rt, user.dir=D:\Programming\Workspace\Java_myself\homework2, os.arch=amd64, connection.username=postgres, java.vm.specification.name=Java Virtual Machine Specification, hibernate.connection.password=****, sun.os.patch.level=, connection.driver_class=org.postgresql.Driver, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@45f241df, native.encoding=Cp1251, kotlinx.coroutines.debug.enable.flows.stack.trace=true, hibernate.cache.use_second_level_cache=false, java.library.path=C:\Program Files\Java\jdk-17.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\HP\Common\HPDestPlgIn\;C:\Program Files (x86)\HP\IdrsOCR_15.2.10.1114\;C:\Program Files\apache-maven-3.8.4\bin;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\HP\Common\HPDestPlgIn\;C:\Users\Lenovo\IntelliJ IDEA Community Edition 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2025.1.4.1\bin;;C:\Users\Lenovo\AppData\Local\GitHubDesktop\bin;., java.vendor=Oracle Corporation, java.vm.info=mixed mode, sharing, java.vm.version=17.0.2+8-LTS-86, java.rmi.server.randomIDs=true, sun.io.unicode.encoding=UnicodeLittle, hibernate.connection.pool_size=5, connection.url=jdbc:postgresql://localhost:5432/crud_db, debugger.agent.enable.coroutines=true, java.class.version=61.0}
+2025-11-28 22:31:49 [main] [<clinit>] [18] INFO  hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2025-11-28 22:31:49 [main] [getValidationXmlInputStream] [111] DEBUG validator.internal.xml.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2025-11-28 22:31:49 [main] [getResettableInputStreamForPath] [56] DEBUG validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+2025-11-28 22:31:49 [main] [getResettableInputStreamForPath] [62] DEBUG validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2025-11-28 22:31:49 [main] [getValidationXmlInputStream] [118] DEBUG validator.internal.xml.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+2025-11-28 22:31:49 [main] [getDefault] [89] DEBUG validator.internal.engine.resolver.TraversableResolvers - Found jakarta.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming Jakarta Persistence environment. Trying to instantiate Jakarta Persistence aware TraversableResolver
+2025-11-28 22:31:49 [main] [getDefault] [99] DEBUG validator.internal.engine.resolver.TraversableResolvers - Instantiated Jakarta Persistence aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2025-11-28 22:31:49 [main] [buildExpressionFactory] [170] DEBUG org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2025-11-28 22:31:49 [main] [determinePropertyNodeNameProvider] [347] DEBUG hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2025-11-28 22:31:49 [main] [logValidatorFactoryScopedConfiguration] [439] DEBUG hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2025-11-28 22:31:49 [main] [logValidatorFactoryScopedConfiguration] [440] DEBUG hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2025-11-28 22:31:49 [main] [logValidatorFactoryScopedConfiguration] [441] DEBUG hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2025-11-28 22:31:49 [main] [logValidatorFactoryScopedConfiguration] [442] DEBUG hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2025-11-28 22:31:49 [main] [logValidatorFactoryScopedConfiguration] [443] DEBUG hibernate.validator.internal.engine.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2025-11-28 22:31:49 [main] [isConstraintBasedValidationEnabled] [179] DEBUG org.hibernate.boot.beanvalidation.TypeSafeActivator - Skipping application of relational constraints from legacy Hibernate Validator
+2025-11-28 22:31:49 [main] [createFunctionRegistry] [157] DEBUG org.hibernate.HQL_FUNCTIONS - Available HQL Functions:
+	abs(NUMERIC arg)
+	Double acos(NUMERIC arg)
+	Double acosh(NUMERIC arg)
+	Boolean any(BOOLEAN predicate)
+	array( ... )
+	array_agg(arg)
+	array_append( ... )
+	array_concat( ... )
+	Boolean array_contains(ARRAY haystackArray, OBJECT needleElementOrArray)
+	Boolean array_contains_nullable(ARRAY haystackArray, OBJECT needleElementOrArray)
+	array_fill(OBJECT element, INTEGER elementCount)
+	array_fill_list(OBJECT element, INTEGER elementCount)
+	array_get(ARRAY array, INTEGER index)
+	Boolean array_includes(ARRAY haystackArray, OBJECT needleArray)
+	Boolean array_includes_nullable(ARRAY haystackArray, OBJECT needleArray)
+	Boolean array_intersects(ARRAY array0, OBJECT array1)
+	Boolean array_intersects_nullable(ARRAY array0, OBJECT array1)
+	Integer array_length(ARRAY array)
+	array_list( ... )
+	Boolean array_overlaps(ARRAY array0, OBJECT array1)
+	Boolean array_overlaps_nullable(ARRAY array0, OBJECT array1)
+	Integer array_position(ARRAY array, OBJECT element[, INTEGER startPosition])
+	int[] array_positions(ARRAY array, OBJECT element)
+	List array_positions_list(ARRAY array, OBJECT element)
+	array_prepend( ... )
+	array_remove( ... )
+	array_remove_index( ... )
+	array_replace(ARRAY array, OBJECT old, OBJECT new)
+	array_set( ... )
+	array_slice(ARRAY array, INTEGER start, INTEGER end)
+	String array_to_string( ... )
+	array_trim(ARRAY array, INTEGER elementsToRemove)
+	Integer ascii(STRING arg)
+	Double asin(NUMERIC arg)
+	Double asinh(NUMERIC arg)
+	Double atan(NUMERIC arg)
+	Double atan2(NUMERIC arg0, NUMERIC arg1)
+	Double atanh(NUMERIC arg)
+	avg(arg)
+	bit_and(arg)
+	Integer bit_length(STRING_OR_CLOB arg)
+	bit_or(arg)
+	bitand(arg0, arg1)
+	bitnot(arg)
+	bitor(arg0, arg1)
+	bitxor(arg0, arg1)
+	Boolean bool_and(BOOLEAN predicate)
+	Boolean bool_or(BOOLEAN predicate)
+	cast(arg as Type)
+	Double cbrt(NUMERIC arg)
+	ceiling(NUMERIC arg)
+	Character char(INTEGER arg)
+	Integer character_length(STRING_OR_CLOB arg)
+	Character chr(INTEGER arg)
+	coalesce(arg0[, arg1[, ...]])
+	String collate(STRING string as COLLATION collation)
+	(STRING string0[, STRING string1[, ...]])
+	Double corr(NUMERIC arg0, NUMERIC arg1)
+	Double cos(NUMERIC arg)
+	Double cosh(NUMERIC arg)
+	Double cot(NUMERIC arg)
+	Long count([distinct ]{arg|*})
+	Double covar_pop(NUMERIC arg0, NUMERIC arg1)
+	Double covar_samp(NUMERIC arg0, NUMERIC arg1)
+	Double cume_dist([arg0[, ...]])
+	Date current date
+	Time current time
+	Timestamp current timestamp
+	Date current_date
+	Instant current_instant
+	Time current_time
+	Timestamp current_timestamp
+	date_trunc(STRING field, TEMPORAL datetime)
+	dateadd(TEMPORAL_UNIT field, INTEGER magnitude, TEMPORAL datetime)
+	Long|Double datediff(TEMPORAL_UNIT field, TEMPORAL start, TEMPORAL end)
+	Double degrees(NUMERIC arg)
+	Long dense_rank([arg0[, ...]])
+	Boolean every(BOOLEAN predicate)
+	Double exp(NUMERIC arg)
+	extract(TEMPORAL_UNIT field from TEMPORAL arg)
+	first_valueANY value
+	floor(NUMERIC arg)
+	String format(TEMPORAL datetime as STRING pattern)
+	greatest(COMPARABLE arg0, COMPARABLE arg1[, arg2[, ...]])
+	String hex(arg)
+	ifnull(arg0, arg1)
+	String initcap(arg)
+	String insert(STRING string, INTEGER start, INTEGER length, STRING replacement)
+	Instant instant
+	String json_array([arg0[, ...]])
+	String json_array_append(IMPLICIT_JSON arg0, STRING arg1, ANY arg2)
+	String json_array_insert(IMPLICIT_JSON arg0, STRING arg1, ANY arg2)
+	String json_arrayagg(arg0[, arg1])
+	Boolean json_exists(IMPLICIT_JSON arg0, STRING arg1)
+	String json_insert(IMPLICIT_JSON arg0, STRING arg1, ANY arg2)
+	String json_mergepatch(IMPLICIT_JSON arg0, IMPLICIT_JSON arg1[, arg2[, ...]])
+	String json_object( ... )
+	String json_objectagg(arg0, arg1[, arg2, arg3])
+	String json_query( ... )
+	String json_remove(IMPLICIT_JSON arg0, STRING arg1)
+	String json_replace(IMPLICIT_JSON arg0, STRING arg1, ANY arg2)
+	String json_set(IMPLICIT_JSON arg0, STRING arg1, ANY arg2)
+	json_value( ... )
+	lagANY value[, INTEGER offset[, ANY default]]
+	last_valueANY value
+	leadANY value[, INTEGER offset[, ANY default]]
+	least(COMPARABLE arg0, COMPARABLE arg1[, arg2[, ...]])
+	String left(STRING string, INTEGER length)
+	length
+	String listagg(STRING arg0, STRING arg1)
+	Double ln(NUMERIC arg)
+	LocalDate local date
+	LocalDateTime local datetime
+	LocalTime local time
+	LocalDate local_date
+	LocalDateTime local_datetime
+	LocalTime local_time
+	Time localtime
+	Timestamp localtimestamp
+	Integer locate(STRING pattern, STRING string[, INTEGER start])
+	Double log(NUMERIC arg0[, NUMERIC arg1])
+	Double log10(NUMERIC arg)
+	String lower(STRING string)
+	String lpad(STRING string, INTEGER length[, STRING padding])
+	String ltrim(STRING string[, STRING characters])
+	Date make_date(INTEGER arg0, INTEGER arg1, INTEGER arg2)
+	Time make_time(INTEGER arg0, INTEGER arg1, INTEGER arg2)
+	Timestamp make_timestamp(INTEGER arg0, INTEGER arg1, INTEGER arg2, INTEGER arg3, INTEGER arg4, INTEGER arg5)
+	Timestamp make_timestamptz(INTEGER arg0, INTEGER arg1, INTEGER arg2, INTEGER arg3, INTEGER arg4, INTEGER arg5[, INTEGER arg6])
+	max(COMPARABLE arg)
+	byte[] md5(arg)
+	Double median(NUMERIC arg)
+	min(COMPARABLE arg)
+	Integer mod(INTEGER arg0, INTEGER arg1)
+	mode()
+	nth_valueANY value, INTEGER nth
+	nullif(arg0, arg1)
+	Integer octet_length(STRING_OR_CLOB arg)
+	OffsetDateTime offset datetime
+	OffsetDateTime offset_datetime
+	Integer ordinal(ENUM arg)
+	String overlay(string placing replacement from start[ for length])
+	String pad(STRING string with INTEGER length {leading|trailing}[ STRING character])
+	Double percent_rank([arg0[, ...]])
+	percentile_cont(NUMERIC arg)
+	percentile_disc(NUMERIC arg)
+	Double pi
+	Integer position(STRING pattern in STRING string)
+	Double power(NUMERIC arg0, NUMERIC arg1)
+	Double radians(NUMERIC arg)
+	Long rank([arg0[, ...]])
+	Double regr_avgx(NUMERIC arg0, NUMERIC arg1)
+	Double regr_avgy(NUMERIC arg0, NUMERIC arg1)
+	Double regr_count(NUMERIC arg0, NUMERIC arg1)
+	Double regr_intercept(NUMERIC arg0, NUMERIC arg1)
+	Double regr_r2(NUMERIC arg0, NUMERIC arg1)
+	Double regr_slope(NUMERIC arg0, NUMERIC arg1)
+	Double regr_sxx(NUMERIC arg0, NUMERIC arg1)
+	Double regr_sxy(NUMERIC arg0, NUMERIC arg1)
+	Double regr_syy(NUMERIC arg0, NUMERIC arg1)
+	String repeat(STRING string, INTEGER times)
+	String replace(STRING string, STRING pattern, STRING replacement)
+	String right(STRING string, INTEGER length)
+	round(NUMERIC number[, INTEGER places])
+	Long row_number()
+	String rpad(STRING string, INTEGER length[, STRING padding])
+	String rtrim(STRING string[, STRING characters])
+	byte[] sha(arg)
+	Integer sign(NUMERIC arg)
+	Double sin(NUMERIC arg)
+	Double sinh(NUMERIC arg)
+	String soundex(arg)
+	sql
+	Double sqrt(NUMERIC arg)
+	Double stddev(NUMERIC arg)
+	Double stddev_pop(NUMERIC arg)
+	Double stddev_samp(NUMERIC arg)
+	String str(arg)
+	String string(ENUM arg)
+	String substr(STRING string, INTEGER start[, INTEGER length])
+	String substring(STRING string{ from|,} INTEGER start[{ for|,} INTEGER length])
+	sum(arg)
+	Double tan(NUMERIC arg)
+	Double tanh(NUMERIC arg)
+	timestampadd(TEMPORAL_UNIT field, INTEGER magnitude, TEMPORAL datetime)
+	Long|Double timestampdiff(TEMPORAL_UNIT field, TEMPORAL start, TEMPORAL end)
+	String to_char(ANY arg0[, STRING arg1, STRING arg2])
+	Date to_date(STRING arg0[, STRING arg1, STRING arg2])
+	Double to_number(STRING arg0[, STRING arg1, STRING arg2])
+	Timestamp to_timestamp(STRING arg0[, STRING arg1, STRING arg2])
+	String translate(STRING arg0, STRING arg1, STRING arg2)
+	String trim([[{leading|trailing|both} ][STRING arg0 ]from] STRING arg1)
+	trunc( ... )
+	truncate( ... )
+	String upper(STRING string)
+	Double var_pop(NUMERIC arg)
+	Double var_samp(NUMERIC arg)
+	Double variance(NUMERIC arg)
+	String xmlagg( ... )
+	String xmlcomment(STRING arg)
+	String xmlconcat( ... )
+	String xmlelement( ... )
+	Boolean xmlexists( ... )
+	String xmlforest( ... )
+	String xmlpi( ... )
+	String xmlquery( ... )
+
+2025-11-28 22:31:50 [main] [getReflectionOptimizer] [231] DEBUG hibernate.bytecode.internal.bytebuddy.BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [by.nikiforova.crud.entity.User]: private accessor [age]
+2025-11-28 22:31:50 [main] [getService] [103] DEBUG org.hibernate.service.internal.SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated - use 'sessionFactory.getEventEngine().getListenerRegistry()' instead
+2025-11-28 22:31:50 [main] [logStatement] [130] DEBUG org.hibernate.SQL - set client_min_messages = WARNING
+2025-11-28 22:31:50 [main] [logStatement] [130] DEBUG org.hibernate.SQL - drop table if exists users cascade
+2025-11-28 22:31:50 [main] [logStatement] [130] DEBUG org.hibernate.SQL - create table users (age integer, id integer generated by default as identity, created_at timestamp(6), email varchar(255), name varchar(255), primary key (id))
+2025-11-28 22:31:50 [main] [addSessionFactory] [73] DEBUG org.hibernate.orm.factoryRegistry - HHH020384: Registering SessionFactory: beb4562d-d58b-4ab8-a6ca-98d74ffe7b90 (<unnamed>)
+2025-11-28 22:31:50 [main] [<clinit>] [33] DEBUG by.nikiforova.crud.util.HibernateUtil - Creating SessionFactory for working with DB
+2025-11-28 22:31:50 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-28 22:31:50 [main] [logStatement] [130] DEBUG org.hibernate.SQL - /* DELETE FROM User */ delete from users u1_0
+2025-11-28 22:31:50 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-28 22:31:50 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	38000 ns acquiring 1 JDBC connections
+	35000 ns releasing 1 JDBC connections
+	2392500 ns preparing 1 JDBC statements
+	3934100 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	0 ns executing 0 flushes (flushing a total of 0 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	26300 ns executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-28 22:31:50 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-28 22:31:50 [main] [logStatement] [130] DEBUG org.hibernate.SQL - /* insert for by.nikiforova.crud.entity.User */insert into users (age,created_at,email,name) values (?,?,?,?)
+2025-11-28 22:31:50 [main] [getGeneratedValues] [103] DEBUG org.hibernate.id.IdentifierGeneratorHelper - Extracted generated values for entity [by.nikiforova.crud.entity.User]: [1]
+2025-11-28 22:31:50 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-28 22:31:50 [main] [logFlushResults] [104] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2025-11-28 22:31:50 [main] [logFlushResults] [111] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2025-11-28 22:31:50 [main] [logEntities] [102] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+2025-11-28 22:31:50 [main] [logEntities] [113] DEBUG org.hibernate.internal.util.EntityPrinter - by.nikiforova.crud.entity.User{createdAt=2025-11-28T22:31:50.778038900, name=Polina, id=1, age=15, email=test1@gmail.com}
+2025-11-28 22:31:50 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	43200 ns acquiring 1 JDBC connections
+	17600 ns releasing 1 JDBC connections
+	496600 ns preparing 1 JDBC statements
+	3363200 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	8806600 ns executing 1 flushes (flushing a total of 1 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-28 22:31:50 [main] [save] [32] INFO  by.nikiforova.crud.dao.UserDaoImpl - Transaction on saving user with id = Person{id=1, name='Polina', email='test1@gmail.com', age=15, createdAt=2025-11-28T22:31:50.778038900} successfully completed.
+2025-11-28 22:31:50 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-28 22:31:50 [main] [logStatement] [130] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0.name from users u1_0 where u1_0.id=?
+2025-11-28 22:31:50 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-28 22:31:50 [main] [logFlushResults] [104] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2025-11-28 22:31:50 [main] [logFlushResults] [111] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2025-11-28 22:31:50 [main] [logEntities] [102] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+2025-11-28 22:31:50 [main] [logEntities] [113] DEBUG org.hibernate.internal.util.EntityPrinter - by.nikiforova.crud.entity.User{createdAt=2025-11-28T22:31:50.778039, name=Polina, id=1, age=15, email=test1@gmail.com}
+2025-11-28 22:31:50 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	23700 ns acquiring 1 JDBC connections
+	13800 ns releasing 1 JDBC connections
+	99000 ns preparing 1 JDBC statements
+	1289100 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	1054500 ns executing 1 flushes (flushing a total of 1 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-28 22:31:50 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-28 22:31:50 [main] [logStatement] [130] DEBUG org.hibernate.SQL - /* DELETE FROM User */ delete from users u1_0
+2025-11-28 22:31:50 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-28 22:31:50 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	23800 ns acquiring 1 JDBC connections
+	15700 ns releasing 1 JDBC connections
+	29600 ns preparing 1 JDBC statements
+	761500 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	0 ns executing 0 flushes (flushing a total of 0 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	5700 ns executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-28 22:31:50 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-28 22:31:50 [main] [logStatement] [130] DEBUG org.hibernate.SQL - /* insert for by.nikiforova.crud.entity.User */insert into users (age,created_at,email,name) values (?,?,?,?)
+2025-11-28 22:31:50 [main] [getGeneratedValues] [103] DEBUG org.hibernate.id.IdentifierGeneratorHelper - Extracted generated values for entity [by.nikiforova.crud.entity.User]: [2]
+2025-11-28 22:31:50 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-28 22:31:50 [main] [logFlushResults] [104] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2025-11-28 22:31:50 [main] [logFlushResults] [111] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2025-11-28 22:31:50 [main] [logEntities] [102] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+2025-11-28 22:31:50 [main] [logEntities] [113] DEBUG org.hibernate.internal.util.EntityPrinter - by.nikiforova.crud.entity.User{createdAt=2025-11-28T22:31:50.995589700, name=Polina, id=2, age=15, email=test1@gmail.com}
+2025-11-28 22:31:51 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	20400 ns acquiring 1 JDBC connections
+	11900 ns releasing 1 JDBC connections
+	57200 ns preparing 1 JDBC statements
+	639700 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	654700 ns executing 1 flushes (flushing a total of 1 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-28 22:31:51 [main] [save] [32] INFO  by.nikiforova.crud.dao.UserDaoImpl - Transaction on saving user with id = Person{id=2, name='Polina', email='test1@gmail.com', age=15, createdAt=2025-11-28T22:31:50.995589700} successfully completed.
+2025-11-28 22:31:51 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-28 22:31:51 [main] [logStatement] [130] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0.name from users u1_0 where u1_0.id=?
+2025-11-28 22:31:51 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-28 22:31:51 [main] [logFlushResults] [104] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 1 updates, 0 deletions to 1 objects
+2025-11-28 22:31:51 [main] [logFlushResults] [111] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2025-11-28 22:31:51 [main] [logEntities] [102] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+2025-11-28 22:31:51 [main] [logEntities] [113] DEBUG org.hibernate.internal.util.EntityPrinter - by.nikiforova.crud.entity.User{createdAt=2025-11-28T22:31:50.995589700, name=Polina, id=2, age=15, email=test1@gmail.com}
+2025-11-28 22:31:51 [main] [logStatement] [130] DEBUG org.hibernate.SQL - /* update for by.nikiforova.crud.entity.User */update users set age=?,created_at=?,email=?,name=? where id=?
+2025-11-28 22:31:51 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	17400 ns acquiring 1 JDBC connections
+	12300 ns releasing 1 JDBC connections
+	113900 ns preparing 2 JDBC statements
+	1164700 ns executing 2 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	9889800 ns executing 1 flushes (flushing a total of 1 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-28 22:31:51 [main] [update] [118] INFO  by.nikiforova.crud.dao.UserDaoImpl - User updated successfully: Person{id=2, name='Polina', email='test1@gmail.com', age=15, createdAt=2025-11-28T22:31:50.995589700}
+2025-11-28 22:31:51 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-28 22:31:51 [main] [logStatement] [130] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0.name from users u1_0 where u1_0.id=?
+2025-11-28 22:31:51 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-28 22:31:51 [main] [logFlushResults] [104] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2025-11-28 22:31:51 [main] [logFlushResults] [111] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2025-11-28 22:31:51 [main] [logEntities] [102] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+2025-11-28 22:31:51 [main] [logEntities] [113] DEBUG org.hibernate.internal.util.EntityPrinter - by.nikiforova.crud.entity.User{createdAt=2025-11-28T22:31:50.995590, name=Polina, id=2, age=15, email=test1@gmail.com}
+2025-11-28 22:31:51 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	25600 ns acquiring 1 JDBC connections
+	11700 ns releasing 1 JDBC connections
+	39100 ns preparing 1 JDBC statements
+	991100 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	676400 ns executing 1 flushes (flushing a total of 1 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-28 22:31:51 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-28 22:31:51 [main] [logStatement] [130] DEBUG org.hibernate.SQL - /* DELETE FROM User */ delete from users u1_0
+2025-11-28 22:31:51 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-28 22:31:51 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	19200 ns acquiring 1 JDBC connections
+	13200 ns releasing 1 JDBC connections
+	30700 ns preparing 1 JDBC statements
+	873300 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	0 ns executing 0 flushes (flushing a total of 0 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	5000 ns executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-28 22:31:51 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-28 22:31:51 [main] [logStatement] [130] DEBUG org.hibernate.SQL - /* insert for by.nikiforova.crud.entity.User */insert into users (age,created_at,email,name) values (?,?,?,?)
+2025-11-28 22:31:51 [main] [getGeneratedValues] [103] DEBUG org.hibernate.id.IdentifierGeneratorHelper - Extracted generated values for entity [by.nikiforova.crud.entity.User]: [3]
+2025-11-28 22:31:51 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-28 22:31:51 [main] [logFlushResults] [104] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2025-11-28 22:31:51 [main] [logFlushResults] [111] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2025-11-28 22:31:51 [main] [logEntities] [102] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+2025-11-28 22:31:51 [main] [logEntities] [113] DEBUG org.hibernate.internal.util.EntityPrinter - by.nikiforova.crud.entity.User{createdAt=2025-11-28T22:31:51.030121, name=Anna, id=3, age=5, email=test2@gmail.com}
+2025-11-28 22:31:51 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	16800 ns acquiring 1 JDBC connections
+	11000 ns releasing 1 JDBC connections
+	32200 ns preparing 1 JDBC statements
+	853800 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	625900 ns executing 1 flushes (flushing a total of 1 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-28 22:31:51 [main] [save] [32] INFO  by.nikiforova.crud.dao.UserDaoImpl - Transaction on saving user with id = Person{id=3, name='Anna', email='test2@gmail.com', age=5, createdAt=2025-11-28T22:31:51.030121} successfully completed.
+2025-11-28 22:31:51 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-28 22:31:51 [main] [logStatement] [130] DEBUG org.hibernate.SQL - /* insert for by.nikiforova.crud.entity.User */insert into users (age,created_at,email,name) values (?,?,?,?)
+2025-11-28 22:31:51 [main] [getGeneratedValues] [103] DEBUG org.hibernate.id.IdentifierGeneratorHelper - Extracted generated values for entity [by.nikiforova.crud.entity.User]: [4]
+2025-11-28 22:31:51 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-28 22:31:51 [main] [logFlushResults] [104] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2025-11-28 22:31:51 [main] [logFlushResults] [111] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2025-11-28 22:31:51 [main] [logEntities] [102] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+2025-11-28 22:31:51 [main] [logEntities] [113] DEBUG org.hibernate.internal.util.EntityPrinter - by.nikiforova.crud.entity.User{createdAt=2025-11-28T22:31:51.030121, name=Polina, id=4, age=15, email=test1@gmail.com}
+2025-11-28 22:31:51 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	52200 ns acquiring 1 JDBC connections
+	28000 ns releasing 1 JDBC connections
+	34200 ns preparing 1 JDBC statements
+	595400 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	491900 ns executing 1 flushes (flushing a total of 1 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-28 22:31:51 [main] [save] [32] INFO  by.nikiforova.crud.dao.UserDaoImpl - Transaction on saving user with id = Person{id=4, name='Polina', email='test1@gmail.com', age=15, createdAt=2025-11-28T22:31:51.030121} successfully completed.
+2025-11-28 22:31:51 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-28 22:31:51 [main] [logStatement] [130] DEBUG org.hibernate.SQL - /* from User */ select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0.name from users u1_0
+2025-11-28 22:31:51 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-28 22:31:51 [main] [logFlushResults] [104] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+2025-11-28 22:31:51 [main] [logFlushResults] [111] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2025-11-28 22:31:51 [main] [logEntities] [102] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+2025-11-28 22:31:51 [main] [logEntities] [113] DEBUG org.hibernate.internal.util.EntityPrinter - by.nikiforova.crud.entity.User{createdAt=2025-11-28T22:31:51.030121, name=Polina, id=4, age=15, email=test1@gmail.com}
+2025-11-28 22:31:51 [main] [logEntities] [113] DEBUG org.hibernate.internal.util.EntityPrinter - by.nikiforova.crud.entity.User{createdAt=2025-11-28T22:31:51.030121, name=Anna, id=3, age=5, email=test2@gmail.com}
+2025-11-28 22:31:51 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	14700 ns acquiring 1 JDBC connections
+	10600 ns releasing 1 JDBC connections
+	98500 ns preparing 1 JDBC statements
+	671300 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	815400 ns executing 1 flushes (flushing a total of 2 entities and 0 collections)
+	10000 ns executing 1 pre-partial-flushes
+	4900 ns executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-28 22:31:51 [main] [findAll] [92] INFO  by.nikiforova.crud.dao.UserDaoImpl - Found 2 users
+2025-11-28 22:31:51 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-28 22:31:51 [main] [logStatement] [130] DEBUG org.hibernate.SQL - /* DELETE FROM User */ delete from users u1_0
+2025-11-28 22:31:51 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-28 22:31:51 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	29100 ns acquiring 1 JDBC connections
+	11700 ns releasing 1 JDBC connections
+	19800 ns preparing 1 JDBC statements
+	556500 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	0 ns executing 0 flushes (flushing a total of 0 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	5000 ns executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-28 22:31:51 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-28 22:31:51 [main] [logStatement] [130] DEBUG org.hibernate.SQL - /* insert for by.nikiforova.crud.entity.User */insert into users (age,created_at,email,name) values (?,?,?,?)
+2025-11-28 22:31:51 [main] [getGeneratedValues] [103] DEBUG org.hibernate.id.IdentifierGeneratorHelper - Extracted generated values for entity [by.nikiforova.crud.entity.User]: [5]
+2025-11-28 22:31:51 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-28 22:31:51 [main] [logFlushResults] [104] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2025-11-28 22:31:51 [main] [logFlushResults] [111] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2025-11-28 22:31:51 [main] [logEntities] [102] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+2025-11-28 22:31:51 [main] [logEntities] [113] DEBUG org.hibernate.internal.util.EntityPrinter - by.nikiforova.crud.entity.User{createdAt=2025-11-28T22:31:51.085880800, name=Anna, id=5, age=5, email=test2@gmail.com}
+2025-11-28 22:31:51 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	23100 ns acquiring 1 JDBC connections
+	12300 ns releasing 1 JDBC connections
+	31700 ns preparing 1 JDBC statements
+	1099200 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	546500 ns executing 1 flushes (flushing a total of 1 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-28 22:31:51 [main] [save] [32] INFO  by.nikiforova.crud.dao.UserDaoImpl - Transaction on saving user with id = Person{id=5, name='Anna', email='test2@gmail.com', age=5, createdAt=2025-11-28T22:31:51.085880800} successfully completed.
+2025-11-28 22:31:51 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-28 22:31:51 [main] [logStatement] [130] DEBUG org.hibernate.SQL - /* insert for by.nikiforova.crud.entity.User */insert into users (age,created_at,email,name) values (?,?,?,?)
+2025-11-28 22:31:51 [main] [getGeneratedValues] [103] DEBUG org.hibernate.id.IdentifierGeneratorHelper - Extracted generated values for entity [by.nikiforova.crud.entity.User]: [6]
+2025-11-28 22:31:51 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-28 22:31:51 [main] [logFlushResults] [104] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2025-11-28 22:31:51 [main] [logFlushResults] [111] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2025-11-28 22:31:51 [main] [logEntities] [102] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+2025-11-28 22:31:51 [main] [logEntities] [113] DEBUG org.hibernate.internal.util.EntityPrinter - by.nikiforova.crud.entity.User{createdAt=2025-11-28T22:31:51.085880800, name=Polina, id=6, age=15, email=test1@gmail.com}
+2025-11-28 22:31:51 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	12600 ns acquiring 1 JDBC connections
+	13000 ns releasing 1 JDBC connections
+	30000 ns preparing 1 JDBC statements
+	645600 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	617400 ns executing 1 flushes (flushing a total of 1 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-28 22:31:51 [main] [save] [32] INFO  by.nikiforova.crud.dao.UserDaoImpl - Transaction on saving user with id = Person{id=6, name='Polina', email='test1@gmail.com', age=15, createdAt=2025-11-28T22:31:51.085880800} successfully completed.
+2025-11-28 22:31:51 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-28 22:31:51 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-28 22:31:51 [main] [logFlushResults] [104] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+2025-11-28 22:31:51 [main] [logFlushResults] [111] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2025-11-28 22:31:51 [main] [logEntities] [102] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+2025-11-28 22:31:51 [main] [logEntities] [113] DEBUG org.hibernate.internal.util.EntityPrinter - by.nikiforova.crud.entity.User{createdAt=2025-11-28T22:31:51.085880800, name=Anna, id=5, age=5, email=test2@gmail.com}
+2025-11-28 22:31:51 [main] [logStatement] [130] DEBUG org.hibernate.SQL - /* delete for by.nikiforova.crud.entity.User */delete from users where id=?
+2025-11-28 22:31:51 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	12700 ns acquiring 1 JDBC connections
+	10800 ns releasing 1 JDBC connections
+	75400 ns preparing 1 JDBC statements
+	509800 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	4399000 ns executing 1 flushes (flushing a total of 1 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-28 22:31:51 [main] [delete] [143] ERROR by.nikiforova.crud.dao.UserDaoImpl - User deleted successfully: Person{id=5, name='Anna', email='test2@gmail.com', age=5, createdAt=2025-11-28T22:31:51.085880800}
+2025-11-28 22:31:51 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-28 22:31:51 [main] [logStatement] [130] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0.name from users u1_0 where u1_0.id=?
+2025-11-28 22:31:51 [main] [rollback] [123] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Rolling back transaction
+2025-11-28 22:31:51 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	14900 ns acquiring 1 JDBC connections
+	11100 ns releasing 1 JDBC connections
+	21500 ns preparing 1 JDBC statements
+	512200 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	0 ns executing 0 flushes (flushing a total of 0 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-28 22:31:51 [main] [findById] [63] INFO  by.nikiforova.crud.dao.UserDaoImpl - User not found with id: 5
+2025-11-28 22:31:51 [main] [findById] [80] ERROR by.nikiforova.crud.dao.UserDaoImpl - Unexpected error while finding user by id: 5
+by.nikiforova.crud.exception.UserNotFoundException: User not found with id: 5
+	at by.nikiforova.crud.dao.UserDaoImpl.findById(UserDaoImpl.java:64)
+	at by.nikiforova.crud.dao.UserDaoImplTest.lambda$deleteTest$2(UserDaoImplTest.java:109)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3223)
+	at by.nikiforova.crud.dao.UserDaoImplTest.deleteTest(UserDaoImplTest.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502)
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:93)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:48)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$0(InterceptingLauncher.java:41)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:40)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:48)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:67)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-11-28 22:31:51 [main] [close] [817] DEBUG org.hibernate.internal.SessionFactoryImpl - HHH000031: Closing factory [beb4562d-d58b-4ab8-a6ca-98d74ffe7b90]
+2025-11-28 22:31:51 [main] [perform] [612] DEBUG hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2025-11-28 22:31:51 [main] [logStatement] [130] DEBUG org.hibernate.SQL - set client_min_messages = WARNING
+2025-11-28 22:31:51 [main] [logStatement] [130] DEBUG org.hibernate.SQL - drop table if exists users cascade
+2025-11-28 22:31:51 [main] [stop] [79] DEBUG org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/crud_db]

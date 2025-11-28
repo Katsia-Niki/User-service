@@ -1,0 +1,48 @@
+2025-11-22 10:25:11 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-22 10:25:11 [main] [logStatement] [130] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0.name from users u1_0 where u1_0.id=?
+2025-11-22 10:25:11 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-22 10:25:11 [main] [logFlushResults] [104] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2025-11-22 10:25:11 [main] [logFlushResults] [111] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2025-11-22 10:25:11 [main] [logEntities] [102] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+2025-11-22 10:25:11 [main] [logEntities] [113] DEBUG org.hibernate.internal.util.EntityPrinter - by.nikiforova.crud.entity.User{createdAt=2025-11-22T10:23:40.598773, name=Kate, id=1, age=15, email=kate_mail@ru.by}
+2025-11-22 10:25:11 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	19900 ns acquiring 1 JDBC connections
+	26300 ns releasing 1 JDBC connections
+	38300 ns preparing 1 JDBC statements
+	736100 ns executing 1 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	890100 ns executing 1 flushes (flushing a total of 1 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-22 10:25:11 [main] [begin] [75] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Beginning transaction
+2025-11-22 10:25:11 [main] [logStatement] [130] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.age,u1_0.created_at,u1_0.email,u1_0.name from users u1_0 where u1_0.id=?
+2025-11-22 10:25:11 [main] [commit] [88] DEBUG hibernate.engine.transaction.internal.TransactionImpl - Committing transaction
+2025-11-22 10:25:11 [main] [logFlushResults] [104] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 1 updates, 0 deletions to 1 objects
+2025-11-22 10:25:11 [main] [logFlushResults] [111] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2025-11-22 10:25:11 [main] [logEntities] [102] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+2025-11-22 10:25:11 [main] [logEntities] [113] DEBUG org.hibernate.internal.util.EntityPrinter - by.nikiforova.crud.entity.User{createdAt=2025-11-22T10:23:40.598773, name=Kate, id=1, age=16, email=kate_mail@mail.com}
+2025-11-22 10:25:11 [main] [logStatement] [130] DEBUG org.hibernate.SQL - /* update for by.nikiforova.crud.entity.User */update users set age=?,created_at=?,email=?,name=? where id=?
+2025-11-22 10:25:11 [main] [end] [279] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	23800 ns acquiring 1 JDBC connections
+	23000 ns releasing 1 JDBC connections
+	123900 ns preparing 2 JDBC statements
+	2768300 ns executing 2 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	11596200 ns executing 1 flushes (flushing a total of 1 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2025-11-22 10:25:11 [main] [update] [84] INFO  by.nikiforova.crud.dao.UserDaoImpl - User updated successfully: Person{id=1, name='Kate', email='kate_mail@mail.com', age=16, createdAt=2025-11-22T10:23:40.598773}
+2025-11-22 10:25:19 [main] [main] [32] INFO  by.nikiforova.crud.main.Main - Завершение работы user-service
+2025-11-22 10:25:19 [main] [close] [817] DEBUG org.hibernate.internal.SessionFactoryImpl - HHH000031: Closing factory [874921c8-4436-4fd8-8e56-3c85ab70ac97]
+2025-11-22 10:25:19 [main] [perform] [612] DEBUG hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2025-11-22 10:25:19 [main] [logStatement] [130] DEBUG org.hibernate.SQL - set client_min_messages = WARNING
+2025-11-22 10:25:19 [main] [logStatement] [130] DEBUG org.hibernate.SQL - drop table if exists users cascade
+2025-11-22 10:25:19 [main] [stop] [79] DEBUG org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/crud_db]

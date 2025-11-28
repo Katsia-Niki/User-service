@@ -23,6 +23,7 @@
 
     </Appenders>
     <Loggers>
+        <Logger name="org.jboss.logging" level="off" additivity="false"/>
         <!--Loger LEVEL-->
         <Root level="TRACE">
             <!--ENABLES LOGGERS-->
