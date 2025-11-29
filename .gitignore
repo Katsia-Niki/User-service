@@ -3,6 +3,14 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+# Игнорировать папку .idea
+.idea/
+
+# Игнорировать папки logs, log, out
+logs/
+log/
+out/
+
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
