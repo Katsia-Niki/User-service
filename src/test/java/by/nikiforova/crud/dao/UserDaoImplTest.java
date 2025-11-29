@@ -20,12 +20,25 @@ import java.util.Optional;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class UserDaoImplTest {
 
+    private static final String DATABASE_NAME = "test_db";
+    private static final String POSTGRE_SQL_CONTAINER = "postgres:17.5";
+    private static final String USERNAME_DB = "postgres";
+    private static final String PASSWORD_DB = "password";
+
+    private static final String USER_POLINA_NAME = "Polina";
+    private static final String USER_POLINA_EMAIL = "test1@gmail.com";
+    private static final Integer USER_POLINA_AGE = 15;
+
+    private static final String USER_ANNA_NAME = "Anna";
+    private static final String USER_ANNA_EMAIL = "test2@gmail.com";
+    private static final Integer USER_ANNA_AGE = 5;
+
     @Container
     private static final PostgreSQLContainer<?> postgresqlContainer =
-            new PostgreSQLContainer<>("postgres:17.5")
-                    .withDatabaseName("test_db")
-                    .withUsername("postgres")
-                    .withPassword("password");
+            new PostgreSQLContainer<>(POSTGRE_SQL_CONTAINER)
+                    .withDatabaseName(DATABASE_NAME)
+                    .withUsername(USERNAME_DB)
+                    .withPassword(PASSWORD_DB);
 
     private static UserDao userDao;
     private static SessionFactory sessionFactory;
@@ -64,8 +77,9 @@ class UserDaoImplTest {
     }
 
     @Test
+    @DisplayName("saveAndGetUser() - success")
     void saveAndGetUser() {
-        User user = new User("Polina", "test1@gmail.com", 15);
+        User user = new User(USER_POLINA_NAME, USER_POLINA_EMAIL, USER_POLINA_AGE);
         userDao.save(user);
 
         Optional<User> optionalFromDb = userDao.findById(user.getId());
@@ -74,9 +88,10 @@ class UserDaoImplTest {
 
 
     @Test
+    @DisplayName("findAllTest() - success")
     void findAllTest() {
-        User anna = new User("Anna", "test2@gmail.com", 5);
-        User polina = new User("Polina", "test1@gmail.com", 15);
+        User anna = new User(USER_ANNA_NAME, USER_ANNA_EMAIL, USER_ANNA_AGE);
+        User polina = new User(USER_POLINA_NAME, USER_POLINA_EMAIL, USER_POLINA_AGE);
         List<User> listForTest = List.of(anna, polina);
         UserDaoImplTest.userDao.save(anna);
         userDao.save(polina);
@@ -88,8 +103,9 @@ class UserDaoImplTest {
     }
 
     @Test
+    @DisplayName("updateTest() - success")
     void updateTest() {
-        User polina = new User("Polina", "test1@gmail.com", 15);
+        User polina = new User(USER_POLINA_NAME, USER_POLINA_EMAIL, USER_POLINA_AGE);
         userDao.save(polina);
         userDao.update(polina);
 
@@ -98,9 +114,10 @@ class UserDaoImplTest {
     }
 
     @Test
+    @DisplayName("deleteTest() - exception")
     void deleteTest() {
-        User anna = new User("Anna", "test2@gmail.com", 5);
-        User polina = new User("Polina", "test1@gmail.com", 15);
+        User anna = new User(USER_ANNA_NAME, USER_ANNA_EMAIL, USER_ANNA_AGE);
+        User polina = new User(USER_POLINA_NAME, USER_POLINA_EMAIL, USER_POLINA_AGE);
         userDao.save(anna);
         userDao.save(polina);
 
