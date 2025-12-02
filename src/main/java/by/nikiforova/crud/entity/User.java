@@ -13,18 +13,18 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @NotEmpty(message = "Name cannot be empty")
-    @Size(min = 2, max = 50, message = "Name must be between 2 and 50 characters")
+    @NotEmpty(message = "Имя не может быть пустым")
+    @Size(min = 2, max = 50, message = "Имя должно иметь от 2 до 50 символов")
     @Column(name = "name")
     private String name;
 
-    @NotEmpty(message = "Email cannot be empty")
-    @Email(message = "Email should be valid")
+    @NotEmpty(message = "Email не может быть пустым")
+    @Email(message = "Email должен быть валидным")
     @Column(name = "email")
     private String email;
 
-    @Min(value = 0, message = "Age should not be less than 0")
-    @Max(value = 120, message = "Age should not be greater than 120")
+    @Min(value = 0, message = "Возраст не может быть меньше 0")
+    @Max(value = 120, message = "Возраст не может быть больше 120")
     @Column(name = "age")
     private Integer age;
 

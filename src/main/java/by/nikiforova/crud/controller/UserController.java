@@ -2,12 +2,17 @@ package by.nikiforova.crud.controller;
 
 import by.nikiforova.crud.entity.User;
 import by.nikiforova.crud.service.UserService;
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.Validation;
+import jakarta.validation.Validator;
+import jakarta.validation.ValidatorFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
+import java.util.Set;
 
 public class UserController {
 
@@ -15,10 +20,13 @@ public class UserController {
 
     private final Scanner scanner;
     private final UserService userService;
+    private final Validator validator;
 
     public UserController(UserService userService) {
         this.userService = userService;
         this.scanner = new Scanner(System.in);
+        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+        this.validator = factory.getValidator();
     }
 
     public void runApplication() {
@@ -53,23 +61,26 @@ public class UserController {
             System.out.print("Имя: ");
             String name = scanner.nextLine().trim();
 
-            if (name.isEmpty()) {
-                System.out.println("Имя не может быть пустым");
-                return;
-            }
-
             System.out.print("Email: ");
             String email = scanner.nextLine().trim();
 
-            if (email.isEmpty()) {
-                System.out.println("Email не может быть пустым");
-                return;
-            }
-
             int age = getIntInput("Возраст: ");
 
-            if (age < 0 || age > 120) {
-                System.out.println("Некорректный возраст");
+            Set<ConstraintViolation<User>> violations = validator.validate(new User(name, email, age));
+
+            if (!violations.isEmpty()) {
+                for (ConstraintViolation<User> violation : violations) {
+                    String propertyPath = violation.getPropertyPath().toString();
+                    String message = violation.getMessage();
+
+                    if (propertyPath.equals("email")) {
+                        System.out.println("Некорректный email: " + message);
+                    } else if (propertyPath.equals("age")) {
+                        System.out.println("Некорректный возраст: " + message);
+                    } else if (propertyPath.equals("name")) {
+                        System.out.println("Некорректное имя: " + message);
+                    }
+                }
                 return;
             }
 
